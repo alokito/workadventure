@@ -158,7 +158,7 @@ export class GameScene extends ResizableScene implements CenterListener {
         this.groups = new Map<number, Sprite>();
         this.instance = room.getInstance();
 
-        this.MapUrlFile = MapUrlFile;
+        this.MapUrlFile = MapUrlFile.replace("http://","https://");
         this.RoomId = room.id;
 
         this.createPromise = new Promise<void>((resolve, reject): void => {
